@@ -1,6 +1,6 @@
 #include <iostream>
 
-// solved
+// SOLVED
 using namespace std;
 
 int main()
