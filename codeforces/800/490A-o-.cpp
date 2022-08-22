@@ -3,8 +3,9 @@
 // SOLVED
 using namespace std;
 
-int main() {
-    int limit, num, res[4][5001], ind[4], ans;
+void s1()
+{
+    int limit, num, res[4][5001] {}, ind[4] {}, ans;
 
     cin >> limit;
     
@@ -18,4 +19,10 @@ int main() {
     for (int i = 0; i < ans; i++) {
         cout << res[1][i] << " " << res[2][i] << " " << res[3][i] << endl;
     }
+}
+
+int main() {
+    s1();
+
+    return 0;
 }
