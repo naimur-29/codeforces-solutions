@@ -9,12 +9,9 @@ bool binary_search(const std::vector<long long int>& sorted_vec, long long int k
         if (key > sorted_vec[mid]){
             left = mid+1;
         }
-        else if (key < sorted_vec[mid]){                                        
+        else if (key < sorted_vec[mid])
             right = mid;
-        }
-        else {
-            return true;
-        }                                         
+        else return true;     
     }
     return false;      
 }
