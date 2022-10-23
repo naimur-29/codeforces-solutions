@@ -14,33 +14,40 @@
 */
 
 #include <iostream>
-#include <vector>
 
 int main() {
-    int size{}, time{};
-    std::cin >> size >> time;
-    std::vector <char> queue;
-    
-    for (int i = 0; i < size; i++) {
-        char inp;
-        std::cin >> inp;
-        queue.push_back(inp);
+    int matrix[3][3];
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            matrix[i][j] = 1;
+        }
     }
 
-    for (int i = 0; i < time; i++) {
-        for (int i = 0; i < size-1; i++) {
-            if(queue.at(i) == 'B' && queue.at(i+1) == 'G') {
-                queue[i] = 'G';
-                queue[i+1] = 'B';
-                i++;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            int count{};
+            std::cin >> count;
+            if (count && count % 2 != 0) {
+                matrix[i][j] = matrix[i][j] ? 0 : 1;
+
+                if (i+1 < 3)
+                    matrix[i+1][j] = matrix[i+1][j] ? 0 : 1;
+                if (i-1 > -1)
+                    matrix[i-1][j] = matrix[i-1][j] ? 0 : 1;
+                if (j+1 < 3)
+                    matrix[i][j+1] = matrix[i][j+1] ? 0 : 1;
+                if (j-1 > -1)
+                    matrix[i][j-1] = matrix[i][j-1] ? 0 : 1;
             }
         }
     }
 
-    for (char c : queue) {
-        std::cout << c;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            std::cout << matrix[i][j];
+        }
+        std::cout << std::endl;
     }
-    std::cout << "\n";
 
     return 0;
 }

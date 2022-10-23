@@ -14,24 +14,29 @@
 */
 
 #include <iostream>
-#include <cmath>
+#include <string>
+#include <algorithm>
 
 int main() {
-    std::pair <int, int> position;
+    std::string word;
+    std::getline(std::cin, word);
+    int size = word.length();
 
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            int num;
-            std::cin >> num;
-            if (num) {
-                position.first = i;
-                position.second = j;
-                break;
-            }
-        }
+    int count{};
+    for (int i = 0; i < size; i++) {
+        if (std::isupper(word[i])) count++;
     }
 
-    std::cout << std::abs(position.first-2) + std::abs(position.second-2) << std::endl;
+    if (count > size-count)
+        std::for_each(word.begin(), word.end(), [](char& c) {
+            c = std::toupper(static_cast<unsigned char>(c));
+        });
+    else
+        std::for_each(word.begin(), word.end(), [](char& c) {
+            c = std::tolower(static_cast<unsigned char>(c));
+        });
+
+    std::cout << word << std::endl;
 
     return 0;
 }

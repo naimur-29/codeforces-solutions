@@ -14,24 +14,15 @@
 */
 
 #include <iostream>
-#include <cmath>
+#include <string>
+#include <algorithm>
 
 int main() {
-    std::pair <int, int> position;
-
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            int num;
-            std::cin >> num;
-            if (num) {
-                position.first = i;
-                position.second = j;
-                break;
-            }
-        }
-    }
-
-    std::cout << std::abs(position.first-2) + std::abs(position.second-2) << std::endl;
+    char first_letter;
+    std::string rest_word, full_word;
+    std::cin >> first_letter >> rest_word;
+    first_letter = std::toupper(first_letter);
+    std::cout << first_letter + rest_word << std::endl;
 
     return 0;
 }

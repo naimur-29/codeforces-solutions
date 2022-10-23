@@ -14,24 +14,18 @@
 */
 
 #include <iostream>
-#include <cmath>
+#include <string>
 
 int main() {
-    std::pair <int, int> position;
+    int size, count{};
+    std::string stone_row;
+    std::cin >> size >> stone_row;
 
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            int num;
-            std::cin >> num;
-            if (num) {
-                position.first = i;
-                position.second = j;
-                break;
-            }
-        }
+    for (int i = 0; i < size-1; i++) {
+        if (stone_row[i] == stone_row[i+1])
+            count++;
     }
-
-    std::cout << std::abs(position.first-2) + std::abs(position.second-2) << std::endl;
+    std::cout << count << std::endl;
 
     return 0;
 }

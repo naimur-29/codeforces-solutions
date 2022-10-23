@@ -14,24 +14,26 @@
 */
 
 #include <iostream>
-#include <cmath>
+#include <string>
 
 int main() {
-    std::pair <int, int> position;
+    int year;
+    std::cin >> year;
 
-    for (int i = 0; i < 5; i++) {
-        for (int j = 0; j < 5; j++) {
-            int num;
-            std::cin >> num;
-            if (num) {
-                position.first = i;
-                position.second = j;
-                break;
+    bool isBeautiful = false;
+    while(!isBeautiful) {
+        year++;
+        std::string str = std::to_string(year);
+
+        isBeautiful = true;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (i != j && str[i] == str[j])
+                    isBeautiful = false;
             }
         }
     }
-
-    std::cout << std::abs(position.first-2) + std::abs(position.second-2) << std::endl;
+    std::cout << year << std::endl;
 
     return 0;
 }
