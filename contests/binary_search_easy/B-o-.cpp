@@ -37,7 +37,7 @@ int FindElementIndex(std::vector <int> arr, int arr_size, int element) {
 int* FindOccurrence (std::vector <int> arr, int size, int key) {
     int mid = FindElementIndex(arr, size, key);
     
-    bool isFound = false, isLeftFound = false, isRightFound = false, isFoundLastElement {mid == -1};
+    bool isLeftFound = false, isRightFound = false, isFoundLastElement {mid == -1};
     int* res = new int[3] {-1, -1, 0};
     int left, right;
     
