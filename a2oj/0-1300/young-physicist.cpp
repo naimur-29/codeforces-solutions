@@ -1,11 +1,4 @@
-# codeforces-solutions
-
-Just saving my history of solutions for Codeforces problems...
-
-# my template:
-
-```c++
-/_
+/*
 ⠀⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀
 ⠀⠀⠀⣴⠿⠏⠀⠀⠀⠀⠀⠀⢳⡀⠀ ⡏⠀⠀⠀⠀⠀⢷
 ⠀⠀⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀⠀⠀⠀ ⡇
@@ -18,13 +11,31 @@ Just saving my history of solutions for Codeforces problems...
 ⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀
 ⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀⠀⣄⢸⠀⠀⠀⠀⠀⠀
 ⣿⣿⣧⣀⣿.........⣀⣰⣏⣘⣆⣀
-_/
+*/
 
 #include <iostream>
 
-int main() {
+using namespace std;
 
+int main() {
+    int x = 0, y = 0, z = 0;    
+    int iter;
+    cin >> iter;
+
+    for (int i = 0; i < iter; i++) {
+        int n1, n2, n3;
+        cin >> n1 >> n2 >> n3;
+
+        x += n1;
+        y += n2;
+        z += n3;
+    }
+    
+    if (x || y || z) {
+        cout << "NO" << endl;
+        return 0;
+    }
+    cout << "YES" << endl;
 
     return 0;
 }
-```

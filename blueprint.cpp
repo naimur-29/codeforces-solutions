@@ -1,11 +1,4 @@
-# codeforces-solutions
-
-Just saving my history of solutions for Codeforces problems...
-
-# my template:
-
-```c++
-/_
+/*
 ⠀⠀⠀⠀⣠⣶⡾⠏⠉⠙⠳⢦⡀⠀⠀⠀⢠⠞⠉⠙⠲⡀⠀
 ⠀⠀⠀⣴⠿⠏⠀⠀⠀⠀⠀⠀⢳⡀⠀ ⡏⠀⠀⠀⠀⠀⢷
 ⠀⠀⢠⣟⣋⡀⢀⣀⣀⡀⠀⣀⡀⣧⠀⢸⠀⠀⠀⠀⠀ ⡇
@@ -18,13 +11,14 @@ Just saving my history of solutions for Codeforces problems...
 ⢀⣾⣽⣿⣿⣿⣿⠛⢲⣶⣾⢉⡷⣿⣿⠵⣿⠀⠀⠀⠀⠀⠀
 ⣼⣿⠍⠉⣿⡭⠉⠙⢺⣇⣼⡏⠀⠀⠀⣄⢸⠀⠀⠀⠀⠀⠀
 ⣿⣿⣧⣀⣿.........⣀⣰⣏⣘⣆⣀
-_/
+*/
 
 #include <iostream>
 
-int main() {
+using namespace std;
 
+int main() {
+    
 
     return 0;
 }
-```
