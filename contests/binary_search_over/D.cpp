@@ -21,17 +21,21 @@ int arr[100009] {};
 
 int main() {
     int sum{}, temp{}, n, m, t;
-    scanf("%d", &n);
+    // scanf("%d", &n);
+    n = 100000;
     
     for(int i = 0; i < n; i++) {
-        scanf("%d", &temp); 
+        // scanf("%d", &temp); 
+        temp = 5;
         sum += temp, arr[i] = sum;
     }
 
-    scanf("%d", &m);
+    // scanf("%d", &m);
+    m = 100000;
     for(int i = 0; i < m; i++) {
         int res = n >> 1;
-        scanf("%d", &t);
+        // scanf("%d", &t);
+        t = i+1;
 
         if (t <= arr[0]) {
             printf("%d\n", 1);
