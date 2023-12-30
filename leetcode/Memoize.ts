@@ -1,4 +1,6 @@
-function memoize(fn) {
+type Fn = (...params: number[]) => number;
+
+function memoize(fn: Fn): Fn {
   let resObj = {};
 
   return (...args) => {
